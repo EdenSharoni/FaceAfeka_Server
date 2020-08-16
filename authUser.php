@@ -6,7 +6,7 @@ $user = @$_POST["user"];
 $option = @$_POST["option"];
 $profile_respose_once = @$_POST["profile_respose_once"];
 @$json_user = @json_decode(@$user);
-
+echo "hello";
 @$request->text = "";
 @$request->user = [];
 
