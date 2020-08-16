@@ -7,7 +7,7 @@ header("Access-Control-Request-Methods: POST, GET, PUT, DELETE");
 header("Access-Control-Request-Headers: Origin, Content-Type");
 header('Content-Type: application/json');
 
-$servername = "localhost";
+$servername = "http://ec2-13-53-136-181.eu-north-1.compute.amazonaws.com";
 $username = "root";
 $password = "eden123";
 $dbname = "face_afeka";
