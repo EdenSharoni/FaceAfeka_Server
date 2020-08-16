@@ -63,7 +63,7 @@ function CheckEmailExsits($conn, $user_table, $email)
 
 function CheckUserAndLogin($conn, $request, $sql)
 {
-	echo $sql;
+	echo "SQL: " . $sql . "\n";
     $user_result = @$conn->query($sql);
 
     if ($user_result->num_rows == 1) {
