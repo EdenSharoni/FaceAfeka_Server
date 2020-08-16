@@ -9,7 +9,7 @@ header('Content-Type: application/json');
 
 $servername = "localhost";
 $username = "root";
-$password = "";
+$password = "eden123";
 $dbname = "face_afeka";
 
 if (! isset($user_table) && ! isset($post_table) && ! isset($like_table)&& ! isset($friend_table) && ! isset($comment_table)&& ! isset($game_table)) {
