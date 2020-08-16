@@ -63,17 +63,9 @@ function CheckEmailExsits($conn, $user_table, $email)
 
 function CheckUserAndLogin($conn, $request, $sql)
 {
-	$servername = "localhost";
-$username = "root";
-$password = "eden123";
-$dbname = "face_afeka";
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error)
-    die("Connection failed: " . $conn->connect_error);
     //$user_result = @$conn->query($sql);
-	
-	if(@$conn->query($sql) === TRUE)
+	//$result = mysqli_query($this->conn, $sql);
+	if(mysqli_query($this->conn, $sql) === TRUE)
 		@$request->text = "TRUE " . $sql;
 	else
 		@$request->text = "FALSE " . $sql;
