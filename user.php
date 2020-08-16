@@ -65,10 +65,10 @@ function CheckUserAndLogin($conn, $request, $sql)
 {
     //$user_result = @$conn->query($sql);
 if(@$conn->query($sql) === TRUE){
-	@$request->text = "TRUE";
+	@$request->text = "TRUE " . $sql . " " . $conn;
 }
 else{
-	@$request->text = "FALSE";
+	@$request->text = "FALSE ". $sql . " " . $conn;
 }
 return true;
     if ($user_result->num_rows == 1) {
