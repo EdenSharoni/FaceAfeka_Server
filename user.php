@@ -67,7 +67,7 @@ function CheckUserAndLogin($conn, $request, $sql)
 	if(@$conn->query($sql) === TRUE)
 		@$request->text = "TRUE " . $sql;
 	else
-		@$request->text = "FALSE ";
+		@$request->text = "FALSE " . $sql;
 	return true;
 	
 	
