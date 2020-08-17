@@ -11,8 +11,12 @@ $username = "root";
 $password = "eden123";
 $dbname = "face_afeka";
 
-$connect = mysql_connect($servername, $username, $password,$dbname) or die("Unable to connect to '$dbhost'");
-
+$connect = mysqli_connect($servername, $username, $password,$dbname) or die("Unable to connect to '$dbname'");
+// Check connection
+if (mysqli_connect_errno($connect))
+{
+    echo "Failed to connect to MySQL: " . mysqli_connect_error();
+} 
  /* // Create connection
  * $conn = new mysqli($servername, $username, $password, $dbname);
  * // Check connection
