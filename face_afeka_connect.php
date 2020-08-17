@@ -23,12 +23,12 @@ if (! isset($user_table) && ! isset($post_table) && ! isset($like_table) && ! is
 
 $connect = mysql_connect($servername, $username, $password) or die("Unable to connect to '$dbhost'");
 mysql_select_db($dbname) or die("Could not open the database '$dbname'");
-$result = mysql_query("SELECT * FROM " . $user_table . "");
+/*$result = mysql_query("SELECT * FROM Users");
 while ($row = mysql_fetch_array($result, MYSQL_NUM)) {
     printf("ID: %s  Name: %s <br>", $row[0], $row[1]);
 }
 
-/*
+
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
