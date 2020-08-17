@@ -28,9 +28,9 @@ if ($conn->connect_error)
 else {
     $sql = "SELECT * FROM " . $user_table . " WHERE username='Eden1480'";
     if (@$conn->query($sql) === TRUE)
-        @$request->text = "TRUE " . $sql;
+        echo "TRUE " . $sql;
     else
-        @$request->text = "FALSE " . $sql;
+        echo "FALSE " . $sql;
 }
 
 function CalculatePassword($pass)
