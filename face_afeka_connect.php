@@ -6,29 +6,14 @@ header("Access-Control-Request-Methods: POST, GET, PUT, DELETE");
 header("Access-Control-Request-Headers: Origin, Content-Type");
 header('Content-Type: application/json');
 
-
-
-$dbname = 'phptest';
-$dbuser = 'root';
-$dbpass = 'eden123';
-$dbhost = 'http://localhost';
-$connect = mysql_connect($dbhost, $dbuser, $dbpass) or die("Unable to connect to '$dbhost'");
-/*mysql_select_db($dbname) or die("Could not open the database '$dbname'");
-$result = mysql_query("SELECT username FROM Users");
-while ($row = mysql_fetch_array($result, MYSQL_NUM)) {
-    printf("Username: %s ", $row[0]);
-}*/
-
-
-
-
-
-/*$servername = "localhost";
+$servername = "localhost";
 $username = "root";
 $password = "eden123";
 $dbname = "face_afeka";
 
- * // Create connection
+$connect = mysql_connect($servername, $username, $password) or die("Unable to connect to '$dbhost'");
+
+ /** // Create connection
  * $conn = new mysqli($servername, $username, $password, $dbname);
  * // Check connection
  * if ($conn->connect_error)
