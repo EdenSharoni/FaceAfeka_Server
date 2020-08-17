@@ -15,11 +15,12 @@ $connect = mysqli_connect($servername, $username, $password, $dbname) or die("Un
 // Check connection
 if (mysqli_connect_errno($connect)) {
     echo "Failed to connect to MySQL: " . mysqli_connect_error();
+    exit();
 } else {
-    $sql = "SELECT * FROM " . $user_table . " WHERE username='Eden1480'";
-    if (@$connect->query($sql) === TRUE)
+    $sql = "SELECT * FROM Users";
+    if ($result = $mysqli->query($sql)) {
         echo "TRUE " . $sql;
-    else
+    } else
         echo "FALSE " . $sql;
 }
 
