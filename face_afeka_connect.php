@@ -1,5 +1,4 @@
 <?php
-
 header("Access-Control-Allow-Headers: Content-Type");
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: POST, GET, PUT, DELETE");
@@ -12,7 +11,7 @@ $username = "root";
 $password = "eden123";
 $dbname = "face_afeka";
 
-if (! isset($user_table) && ! isset($post_table) && ! isset($like_table)&& ! isset($friend_table) && ! isset($comment_table)&& ! isset($game_table)) {
+if (! isset($user_table) && ! isset($post_table) && ! isset($like_table) && ! isset($friend_table) && ! isset($comment_table) && ! isset($game_table)) {
     $user_table = "Users";
     $post_table = "Posts";
     $like_table = "Likes";
@@ -26,7 +25,14 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 if ($conn->connect_error)
     die("Connection failed: " . $conn->connect_error);
-    
+else {
+    $sql = "SELECT * FROM " . $user_table . " WHERE username='Eden1480'";
+    if (@$conn->query($sql) === TRUE)
+        @$request->text = "TRUE " . $sql;
+    else
+        @$request->text = "FALSE " . $sql;
+}
+
 function CalculatePassword($pass)
 {
     $pass = $pass[0] . $pass . $pass[0];
