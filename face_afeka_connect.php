@@ -15,20 +15,21 @@ $connect = mysqli_connect($servername, $username, $password, $dbname) or die("Un
 // Check connection
 if (mysqli_connect_errno($connect)) {
     echo "Failed to connect to MySQL: " . mysqli_connect_error();
-} /*
- * // Create connection
+} else {
+    $sql = "SELECT * FROM " . $user_table . " WHERE username='Eden1480'";
+    if (@$connect->query($sql) === TRUE)
+        echo "TRUE " . $sql;
+    else
+        echo "FALSE " . $sql;
+}
+
+// Create connection
+/*
  * $conn = new mysqli($servername, $username, $password, $dbname);
  * // Check connection
  * if ($conn->connect_error)
  * die("Connection failed: " . $conn->connect_error);
  */
-else {
-    $sql = "SELECT * FROM " . $user_table . " WHERE username='Eden1480'";
-    if (@$conn->query($sql) === TRUE)
-        echo "TRUE " . $sql;
-    else
-        echo "FALSE " . $sql;
-}
 
 if (! isset($user_table) && ! isset($post_table) && ! isset($like_table) && ! isset($friend_table) && ! isset($comment_table) && ! isset($game_table)) {
     $user_table = "Users";
