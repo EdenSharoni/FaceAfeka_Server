@@ -6,7 +6,7 @@ header("Access-Control-Request-Methods: POST, GET, PUT, DELETE");
 header("Access-Control-Request-Headers: Origin, Content-Type");
 header('Content-Type: application/json');
 
-$servername = "http://faceafeka.com.s3-website.eu-central-1.amazonaws.com/";
+$servername = "localhost";
 $username = "root";
 $password = "eden123";
 $dbname = "face_afeka";
