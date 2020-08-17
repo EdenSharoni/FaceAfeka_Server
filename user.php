@@ -64,8 +64,7 @@ function CheckEmailExsits($conn, $user_table, $email)
 function CheckUserAndLogin($conn, $request, $sql)
 {
     //$user_result = @$conn->query($sql);
-	//$result = mysqli_query($this->conn, $sql);
-	if(mysqli_query($this->conn, $sql) === TRUE)
+	if(@$conn->query($sql) === TRUE)
 		@$request->text = "TRUE " . $sql;
 	else
 		@$request->text = "FALSE " . $sql;
