@@ -11,8 +11,8 @@ header('Content-Type: application/json');
 $dbname = 'phptest';
 $dbuser = 'root';
 $dbpass = 'eden123';
-$dbhost = 'location';
-//$connect = mysql_connect($dbhost, $dbuser, $dbpass) or die("Unable to connect to '$dbhost'");
+$dbhost = 'http://localhost';
+$connect = mysql_connect($dbhost, $dbuser, $dbpass) or die("Unable to connect to '$dbhost'");
 /*mysql_select_db($dbname) or die("Could not open the database '$dbname'");
 $result = mysql_query("SELECT username FROM Users");
 while ($row = mysql_fetch_array($result, MYSQL_NUM)) {
